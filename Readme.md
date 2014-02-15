@@ -23,11 +23,13 @@ function callback() {
 var run = each([callback, callback, callback]);
 
 run(); // foo foo foo
+```
 
-// or a more real-world example:
+or in a more real-world example, you might want a series
+of functions called when an object changes.
 
+```js
 model.change(run);
-
 ```
 
 You can also set the context:
