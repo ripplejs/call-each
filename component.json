@@ -2,10 +2,12 @@
   "name": "call-each",
   "repo": "ripplejs/call-each",
   "description": "Calls each function in an array",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "keywords": [],
   "dependencies": {},
-  "development": {},
+  "development": {
+    "component/assert": "*"
+  },
   "license": "MIT",
   "main": "index.js",
   "scripts": [

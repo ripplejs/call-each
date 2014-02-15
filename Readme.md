@@ -1,7 +1,9 @@
 
 # call-each
 
-  Calls each function in an array
+[![Build Status](https://travis-ci.org/ripplejs/call-each.png?branch=master)](https://travis-ci.org/ripplejs/call-each)
+
+  Returns a function that will call each function in an array.
 
 ## Installation
 
@@ -12,9 +14,29 @@
 ## API
 
 ```js
-vr callEach = require('call-each');
+vr each = require('call-each');
+
+function callback() {
+  console.log('foo');
+}
+
+var run = each([callback, callback, callback]);
+
+run(); // foo foo foo
+
+// or a more real-world example:
+
+model.change(run);
 
 ```
+
+You can also set the context:
+
+```js
+var run = each([callback, callback], model);
+```
+
+Each function will be called in that context.
 
 ## License
 
